@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="xiaomi" fetch="https://github.com/xiaomi-sdm660-dev/" />
+
+    <remove-project name="LineageOS/android_hardware_qcom_thermal" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_power" />
+
+    <project path="hardware/qcom/thermal" name="android_hardware_qcom_thermal" groups="qcom,lahaina" remote="xiaomi" revision="s12.1" />
+    <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" groups="qcom,lahaina" remote="xiaomi" revision="s12.1" />
+
+    <project path="hardware/qcom/sdm660/audio" name="android_hardware_qcom_audio" groups="qcom_sdm660" remote="xiaomi" revision="s12.1" />
+    <project path="hardware/qcom/sdm660/display" name="android_hardware_qcom_display" groups="qcom_sdm660" remote="xiaomi" revision="s12.1" />
+    <project path="hardware/qcom/sdm660/media" name="android_hardware_qcom_media" groups="qcom_sdm660" remote="xiaomi" revision="s12.1" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+
+    <project path="device/xiaomi/whyred" name="android_device_xiaomi_whyred" groups="device" remote="xiaomi" revision="s12.1-unified" />
+    <project path="kernel/xiaomi/sdm660" name="android_kernel_xiaomi_sdm660" groups="device" remote="xiaomi" revision="s12.1" />
+    <project path="vendor/xiaomi/whyred" name="proprietary_vendor_xiaomi" groups="device" remote="xiaomi" revision="s12.1-whyred-unified" />
+</manifest>
